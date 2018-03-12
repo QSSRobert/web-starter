@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+// Colours
+$primary-color: #cf33a2; // Primary color in the design
+	 $p-shade1: #e365bf; // Derived shade of the p.color
+	 $p-shade2: #a92483;
+
+$secondary-color: #666666; // Secondary color if relevant
+
+$highlight-color: #f6d936; // Highlight color
+
+$white: #FFFFFF;
+$black: #222222;
+
+$link-color: $primary-color;
+$link-hover: $p-shade1;
+$link-visited: $secondary-color;
+
+$font-color:#333333;
