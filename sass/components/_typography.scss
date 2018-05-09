@@ -5,6 +5,8 @@ $meiryo:"メイリオ", Meiryo, "MS Pゴシック", "MS PGothic", "游ゴシッ�
 $yugothic:"游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, Verdana, sans-serif;
 $hiragino:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic ProN", "游ゴシック", YuGothic, Meiryo, Verdana, sans-serif;
 
+@import "https://fonts.googleapis.com/earlyaccess/hannari.css";
+$hannari: "Hannari", "游明朝", YuMincho, serif;
 @import "http://fonts.googleapis.com/earlyaccess/notosansjapanese.css";
 $noto: "Noto Sans Japanese", "メイリオ", Meiryo, "游ゴシック", YuGothic, sans-serif;
 

@@ -28,6 +28,11 @@ $gutter: 20px;
     display:none !important;
   }
 }
+.xs-up {
+  @media only screen and (max-width:#{$screen-xs - 1}){
+    display:none !important;
+  }
+}
 /* tablets and below */
 .sm-down {
   @media only screen and (min-width:$screen-md){
@@ -40,9 +45,21 @@ $gutter: 20px;
     display:none !important;
   }
 }
+/* pc and below */
+.md-down {
+  @media only screen and (max-width:#{$screen-md - 1}){
+    display:none !important;
+  }
+}
 /* pc and up */
 .md-up {
   @media only screen and (max-width:#{$screen-md - 1}){
+    display:none !important;
+  }
+}
+/* lg and up */
+.lg-up {
+  @media only screen and (max-width:#{$screen-lg - 1}){
     display:none !important;
   }
 }
@@ -50,10 +67,16 @@ $gutter: 20px;
 .fluid-container {width:100%;}
 .container {
   width:100%;
+  max-width: 100%;
   margin:0 auto;
   @media only screen and (min-width:$pc-width){
     width:$pc-width;
   }
+}
+.container-lg {
+  @extend .container;
+  @include min-md { width: 100%; }
+  @include min-lg { width: $screen-lg; }
 }
 .flex-container {
   @extend .container;

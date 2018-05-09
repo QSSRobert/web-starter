@@ -3,15 +3,29 @@ $(document).ready(function() {
   var w = $(window);
   var device;
   function responsiveCheck(){
-    if (w.width >= 992){
+    if (w.width() >= 992){
       device = 'md';
     } else { device = 'sm'; }
   };
   responsiveCheck();
   w.on('resize', responsiveCheck());
+  
+  // debounce scroll event
+  var didScroll = false;
+  $(window).on('scroll', function(){
+    didScroll = true;
+  });
+
+  setInterval(function(){
+    if ( didScroll ) {
+      didScroll = false;
+      // scroll functions
+      fadeScrolltop();
+    }
+  }, 50);
 
 	// smoothscrolling
-	$('a[href^="#"]').click(function(){
+	$('a[href^="#"]:not([href="#"])').click(function(){
 		$('html, body').animate({
 			scrollTop: $( $.attr(this, 'href') ).offset().top//-90(offset for fixed header's height) 
 		}, 500);
@@ -31,14 +45,15 @@ $(document).ready(function() {
   }*/
 
 	// scroll to top
-	$(window).scroll(function(){
-		if ($(window).scrollTop() > 900){
+  function fadeScrolltop(){
+    if ($(window).scrollTop() > 900){
 			$('#scrolltop').fadeIn();
 		}
 		else {
 			$('#scrolltop').fadeOut();
 		}
-	});
+  }
+
 
 	$("#scrolltop").click(function(){
 		$("html, body").animate({ scrollTop : 0 }, 800);

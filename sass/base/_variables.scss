@@ -12,8 +12,15 @@ $highlight-color: #f6d936; // Highlight color
 $white: #FFFFFF;
 $black: #222222;
 
-$link-color: $primary-color;
-$link-hover: $p-shade1;
-$link-visited: $secondary-color;
+// Theme
+
+// Easing & Transitions
+$ui-ease-fast: 150ms ease-out;
+$ui-ease-med: 300ms ease-out;
+$ui-ease-slow: 500ms ease-out;
+.hover-fade {
+  transition: opacity $ui-ease-med;
+  &:hover { opacity: 0.7; }
+}
 
 $font-color:#333333;

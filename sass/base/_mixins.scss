@@ -4,6 +4,17 @@
   }
 }
 
+@mixin sp-portrait() {
+  @media only screen and (max-width:#{$pc-width - 1}) and (orientation:portrait) {
+    @content;
+  }
+
+}@mixin sp-landscape() {
+  @media only screen and (max-width:#{$pc-width - 1}) and (orientation:landscape) {
+    @content;
+  }
+}
+
 @mixin min-xxs() {
   @media only screen and (min-width:$screen-xxs){
     @content;
